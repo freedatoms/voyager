@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>%1</title>
+<style>
+body{background-color:#bbb;}
+h1{padding:0px 200px;}
+#voyager{float:left;}
+#box{position: fixed;left: 10px;top: 10px;bottom: 10px;right: 10px;-webkit-border-radius:5px;border:2px solid #888;background-color:#fff;overflow: auto;}
+#header{height: 130px;border-bottom: 1px solid #888;overflow:hidden;}
+#innerbox{position: fixed;left: 10px;top: 140px;bottom: 10px;right: 10px;}
+object{height:100%;width:100%;}
+</style>
+</head>
+<body>
+  <div id="box">
+    <div id="header">
+	<img id="voyager" src="data:image/png;base64,LOGO_IMAGE_BINARY_DATA_HERE" width="128" height="128"/>
+    	<h1>%1</h1>
+    </div>
+      <div id="innerbox">
+      <object type="application/x-qt-plugin" classid="FtpWindow" name="ftpc"> </object>
+      <script>
+         ftpc.setServer("%2");
+         ftpc.Connect();
+      </script>
+      </div>
+     </div>
+   </body>
+</html>
